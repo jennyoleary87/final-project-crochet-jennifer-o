@@ -45,9 +45,9 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(user_id, user.user_id);
+        return user_id == user.user_id;
     }
 
     @Override
@@ -57,6 +57,11 @@ public class User {
 
     @Override
     public String toString() {
-        return username;
+        return "User{" +
+                "user_id=" + user_id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }
