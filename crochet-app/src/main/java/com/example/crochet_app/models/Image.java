@@ -1,4 +1,4 @@
 package com.example.crochet_app.models;
 
-public class ProjectPhoto {
+public class Image {
 }
