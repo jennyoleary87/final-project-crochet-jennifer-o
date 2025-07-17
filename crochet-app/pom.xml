@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>crochet-app</artifactId>
+	<artifactId>crochet-app-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crochet-app</name>
 	<description>Unit 2 Final Full-Stack Application</description>
