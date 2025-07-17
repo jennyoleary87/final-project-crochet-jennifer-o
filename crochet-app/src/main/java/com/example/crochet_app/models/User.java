@@ -55,13 +55,7 @@ public class User {
         return Objects.hash(user_id);
     }
 
-    @Override
     public String toString() {
-        return "User{" +
-                "user_id=" + user_id +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                '}';
+        return username + " (" + email + ")";
     }
 }

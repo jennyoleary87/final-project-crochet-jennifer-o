@@ -70,14 +70,7 @@ public class Pattern {
 
     @Override
     public String toString() {
-        return "Pattern{" +
-                "pattern_id=" + pattern_id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", user=" + user +
-                '}';
+        return name + " ( " + description + " )";
     }
 
 }
