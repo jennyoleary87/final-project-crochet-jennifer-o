@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9889cb72-50bf-4fb7-8b38-c5e5144e4358" name="Changes" comment="create Repository files" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jennyoleary87&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jennyoleary87/final-project-crochet-jennifer-o.git&quot;,
+    &quot;accountId&quot;: &quot;5c7155b9-5ba1-4b27-ae88-9b1ee3f05f6d&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2zxVdzJ76YFd9dzCQ0t1C9A7w75" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CrochetBackend.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jenny/git/launchcode/final-project-crochet-jennifer-o/crochet-app&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="CrochetBackend" type="Application" factoryName="Application">
+      <envs>
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_PASS" value="Fire87Shrimpz" />
+        <env name="DB_PORT" value="3306" />
+        <env name="DB_USER" value="root" />
+        <env name="DB_NAME" value="crochet_app" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.example.crochet_app.CrochetAppApplication" />
+      <module name="crochet-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9889cb72-50bf-4fb7-8b38-c5e5144e4358" name="Changes" comment="" />
+      <created>1752672802917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752672802917</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1752672892138</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752672892138</updated>
+    </task>
+    <task id="LOCAL-00002" summary="connect database in properties">
+      <option name="closed" value="true" />
+      <created>1752676284209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752676284209</updated>
+    </task>
+    <task id="LOCAL-00003" summary="create models package and files">
+      <option name="closed" value="true" />
+      <created>1752676327696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752676327696</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add sql dependency">
+      <option name="closed" value="true" />
+      <created>1752702455983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752702455983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add hibernate to properties">
+      <option name="closed" value="true" />
+      <created>1752702475828</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752702475828</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create user table">
+      <option name="closed" value="true" />
+      <created>1752765541622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752765541622</updated>
+    </task>
+    <task id="LOCAL-00007" summary="name backend">
+      <option name="closed" value="true" />
+      <created>1752765622348</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752765622348</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fill pattern model">
+      <option name="closed" value="true" />
+      <created>1752768278209</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752768278209</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fill project model">
+      <option name="closed" value="true" />
+      <created>1752768293601</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752768293601</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fill user model">
+      <option name="closed" value="true" />
+      <created>1752768308334</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752768308334</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rename ProjectPhoto to Image">
+      <option name="closed" value="true" />
+      <created>1752768402350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752768402350</updated>
+    </task>
+    <task id="LOCAL-00012" summary="simplify toStrings">
+      <option name="closed" value="true" />
+      <created>1752768829517</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752768829517</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor database models">
+      <option name="closed" value="true" />
+      <created>1753125219123</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753125219123</updated>
+    </task>
+    <task id="LOCAL-00014" summary="create Repository files">
+      <option name="closed" value="true" />
+      <created>1753128518917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753128518917</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <MESSAGE value="connect database in properties" />
+    <MESSAGE value="create models package and files" />
+    <MESSAGE value="add sql dependency" />
+    <MESSAGE value="add hibernate to properties" />
+    <MESSAGE value="create user table" />
+    <MESSAGE value="name backend" />
+    <MESSAGE value="fill pattern model" />
+    <MESSAGE value="fill project model" />
+    <MESSAGE value="fill user model" />
+    <MESSAGE value="rename ProjectPhoto to Image" />
+    <MESSAGE value="simplify toStrings" />
+    <MESSAGE value="refactor database models" />
+    <MESSAGE value="create Repository files" />
+    <option name="LAST_COMMIT_MESSAGE" value="create Repository files" />
+  </component>
+</project>
