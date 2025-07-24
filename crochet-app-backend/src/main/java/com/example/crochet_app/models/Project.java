@@ -7,7 +7,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int project_id;
+    private int id;
 
     private String name;
 
@@ -15,36 +15,37 @@ public class Project {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne(mappedBy = "project", cascade = CascadeType.ALL)
-    private ProjectDetails projectDetails;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "details_id", referencedColumnName = "id")
+    private ProjectDetails details;
 
     public Project() {}
 
-    public Project(String name, User user, ProjectDetails projectDetails) {
+    public Project(String name, User user, ProjectDetails details) {
         this.name = name;
         this.user = user;
-        this.projectDetails = projectDetails;
+        this.details = details;
     }
 
-    public int getProjectId() { return project_id; }
+    public int getId() { return id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
-    public ProjectDetails getDetails() { return projectDetails; }
-    public void setDetails(ProjectDetails projectDetails) { this.projectDetails = projectDetails; }
+    public ProjectDetails getDetails() { return details; }
+    public void setDetails(ProjectDetails details) { this.details = details; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Project project = (Project) o;
-        return project_id == project.project_id;
+        return id == project.id;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(project_id);
+        return Integer.hashCode(id);
     }
 
     @Override

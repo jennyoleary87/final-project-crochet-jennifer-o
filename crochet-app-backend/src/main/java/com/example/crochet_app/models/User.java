@@ -1,5 +1,6 @@
 package com.example.crochet_app.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private final List<Project> projects = new ArrayList<>();
 
     public User() {}
