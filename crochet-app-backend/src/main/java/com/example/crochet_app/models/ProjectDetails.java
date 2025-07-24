@@ -1,5 +1,6 @@
 package com.example.crochet_app.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -7,7 +8,7 @@ public class ProjectDetails {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int details_id;
+    private int id;
 
     private String description;
     private String yarn;
@@ -16,8 +17,8 @@ public class ProjectDetails {
 //    @Column(name = "time_spent")
     private double timeSpent; // number of hours
 
-    @OneToOne
-    @JoinColumn(name = "project_id")
+    @OneToOne(mappedBy = "details")
+    @JsonIgnore
     private Project project;
 
     public ProjectDetails() {}
@@ -35,6 +36,6 @@ public class ProjectDetails {
     public void setTimeSpent(double timeSpent) { this.timeSpent = timeSpent; }
     public String getYarn() { return yarn; }
     public void setYarn(String yarn) { this.yarn = yarn; }
-    public double getHookSize() { return hook; }
-    public void setHookSize(double hook) { this.hook = hook; }
+    public double getHook() { return hook; }
+    public void setHook(double hook) { this.hook = hook; }
 }
