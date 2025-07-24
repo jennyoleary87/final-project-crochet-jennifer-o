@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 import java.util.List;
 
+// what does @CrossOrigin do? - allows requests from any origin - maxAge sets cache duration (seconds) for preflight requests
 @CrossOrigin(origins = "*", maxAge = 3600)
 // what does @RestController do? - combines @Controller and @ResponseBody - handling HTTP requests and returning JSON responses
 @RestController
@@ -36,7 +37,7 @@ public class ProjectController {
         return new ResponseEntity<>(allProjects, HttpStatus.OK);
     }
 
-    // ("{id}") get/view a specific project by id
+    // ("/details/{projectId}") get/view a specific project by id
     // Endpoint is http://localhost:8080/api/projects/{id}
     @GetMapping(value="/details/{projectId}", produces=MediaType.APPLICATION_JSON_VALUE)
     // what does @PathVariable do? - extracts values from URL path and maps them to method parameters

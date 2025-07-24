@@ -20,14 +20,16 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    // GET all users
+    // ("") get/view full list of users
+    // Endpoint is http://localhost:8080/api/users
     @GetMapping("")
     public ResponseEntity<?> getAllUsers() {
         List<User> allUsers = userRepository.findAll();
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
     }
 
-    // GET user by ID
+    // ("/details/{userId}") get/view a specific user by ID
+    // Endpoint is http://localhost:8080/api/users/details/{userId}
     @GetMapping(value="/details/{userId}", produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getUserById(@PathVariable(value="userId") int userId) {
         User currentUser = userRepository.findById(userId).orElse(null);
@@ -39,7 +41,8 @@ public class UserController {
         }
     }
 
-    // POST a new user
+    // ("/add") post/create a new user
+    // Endpoint is http://localhost:8080/api/users/add
     @PostMapping(value="/add", consumes=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createUser(@RequestBody UserDTO userData) {
         User newUser = new User(userData.getUsername(), userData.getEmail(), userData.getPassword());
@@ -47,13 +50,13 @@ public class UserController {
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
-    // ("/update/{userId}") PUT to update an existing user
+    // ("/update/{userId}") put/update an existing user
     // Endpoint is http://localhost:8080/api/users/update/{userId}
 
 
 
 
-    // ("/delete/{userId}") DELETE a user by ID
+    // ("/delete/{userId}") delete a user by ID
     // Endpoint is http://localhost:8080/api/users/delete/{userId}
     @DeleteMapping(value="/delete/{userId}", produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> deleteUser(@PathVariable(value="userId") int userId) {
