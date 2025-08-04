@@ -11,7 +11,7 @@ public class Project {
 
     private String name;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "user_id")
     private User user;
 

@@ -55,9 +55,12 @@ public class ProjectController {
     // Endpoint is http://localhost:8080/api/projects/add
     @PostMapping(value="/add", consumes=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createProject(@RequestBody ProjectDTO projectData) {
-        User user = userRepository.findById(projectData.getUserId()).orElse(null);
-        if (user == null) {
-            return new ResponseEntity<>(Collections.singletonMap("message", "User not found."), HttpStatus.BAD_REQUEST);
+        User user = null;
+        if (projectData.getUserId() != 0) {
+            user = userRepository.findById(projectData.getUserId()).orElse(null);
+            if (user == null) {
+                return new ResponseEntity<>(Collections.singletonMap("message", "User not found."), HttpStatus.BAD_REQUEST);
+            }
         }
         Project newProject = new Project(projectData.getName(), user, projectData.getDetails());
         projectRepository.save(newProject);
@@ -66,7 +69,28 @@ public class ProjectController {
 
     // ("/update/{projectId}") update an existing project
     // Endpoint is http://localhost:8080/api/projects/update/{projectId}
+    @PutMapping(value="/update/{projectId}", consumes=MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateProject(@PathVariable(value="projectId") int projectId, @RequestBody ProjectDTO updatedData) {
+        Project existingProject = projectRepository.findById(projectId).orElse(null);
+        if (existingProject == null) {
+            return new ResponseEntity<>(Collections.singletonMap("message", "Project not found."), HttpStatus.NOT_FOUND);
+        }
+        // Update the project fields
+        existingProject.setName(updatedData.getName());
+        existingProject.setDetails(updatedData.getDetails());
+        // If user ID is supplied, update the user as well
+        if (updatedData.getUserId() != 0) {
+            User user = userRepository.findById(updatedData.getUserId()).orElse(null);
+            if (user == null) {
+                return new ResponseEntity<>(Collections.singletonMap("message", "User not found."), HttpStatus.BAD_REQUEST);
+            }
+            existingProject.setUser(user);
+        }
 
+        // Save the updated project
+        projectRepository.save(existingProject);
+        return new ResponseEntity<>(existingProject, HttpStatus.OK);
+    }
 
 
 
