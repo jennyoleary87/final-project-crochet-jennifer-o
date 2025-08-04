@@ -3,27 +3,31 @@ import ProjectList from './ProjectList';
 import ProjectForm from './ProjectForm';
 import Button from './Button';
 
-const API_URL = 'http://localhost:8080/api';
-
 const ProjectsPage = () => {
-    const [showForm, setShowForm] = useState(false);
-    // const [error, setError] = useState(null);
-    // const [loading, setLoading] = useState(false);
-    const [projects, setProjects] = useState([]);
+    const [showForm, setShowForm] = useState(false); // state for form visibility
+    const [projects, setProjects] = useState([]); // array stores projects fetched from backend
 
+    // fetch projects from backend
     const fetchProjects = async () => {
         try {
             const res = await fetch('http://localhost:8080/api/projects');
             const data = await res.json();
             setProjects(data);
         } catch (error) {
-            console.error('Error fetching projects:', error);
+            alert('Failed to fetch projects');
         }
     };
 
+    // fetch projects when component first loads
     useEffect(() => {
         fetchProjects();
     }, []);
+
+    // handle form submission success & update projects list
+    const handleFormSuccess = () => {
+        setShowForm(false);
+        fetchProjects();
+    };
 
     return (
         <div>
@@ -32,13 +36,11 @@ const ProjectsPage = () => {
                 {showForm ? 'Cancel' : 'Add Project'}
             </Button>
 
+            {/* conditionally render project form */}
             {showForm && (
-                <ProjectForm
-                    onSuccess={() => {
-                        setShowForm(false);
-                        fetchProjects();
-                    }}
-                />
+                <section className="add-project-section">
+                    <ProjectForm onSuccess={handleFormSuccess} />
+                </section>
             )}
 
             <ProjectList projects={projects} />
