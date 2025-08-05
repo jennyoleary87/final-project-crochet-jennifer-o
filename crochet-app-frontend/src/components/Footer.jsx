@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>© 2025 Crochet Tracker. All rights reserved.</p>
+            <p>© 2025 CrochetCorner. All rights reserved.</p>
         </footer>
     );
 };
