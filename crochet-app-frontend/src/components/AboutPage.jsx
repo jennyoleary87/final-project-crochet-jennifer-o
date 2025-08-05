@@ -19,9 +19,10 @@ const AboutPage = () => {
                     <p>
                         In the future, we plan to enhance CrochetCorner with additional features such as:
                         <ul>
-                            <li>Advanced search and filtering options for projects</li>
+                            <li>Advanced search and filtering for projects</li>
+                            <li>Attach downloadable pattern PDFs</li>
                             <li>User authentication and profiles</li>
-                            <li>Integration with external crochet pattern databases</li>
+                            <li>Journal session entries for each project</li>
                         </ul>
                         Stay tuned for updates!
                     </p>
