@@ -16,7 +16,7 @@ Take note of the applicatio.properties file found at crochet-app-backend/src/mai
 1. download this repositories zip, or clone to your machine "git clone https://github.com/jennyoleary87/final-project-crochet-jennifer-o.git" 
 2. Create a MySQL schema in your local root instance named "crochet_app"
 3. open the backend folder in IntelliJ (check for Java 21 as project SDK)
-4. make sure configuration environment variables match your system (example (mine): name=DB_HOST value=localhost, name=DB_PORT value=3306)
+4. make sure configuration environment variables match your system (example (mine): name=DB_HOST value=localhost, name=DB_PORT value=3306, name=DB_NAME value=crochet_app)
 5. run backend main class
 6. open the frontend folder in VS Code
 7. in VS Code, open the terminal to install dependencies "npm install" and run "npm run dev"
