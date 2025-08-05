@@ -23,4 +23,6 @@ Take note of the applicatio.properties file found at crochet-app-backend/src/mai
 
 Link to wireframes: https://www.figma.com/design/sqEjVfgO3i4f6eMc3W8xNU/Unit-2-Crochet?node-id=0-1&t=HJGQRk0yl6TI0Wvx-1 
 
+Link to ERD models: https://lucid.app/lucidchart/8d528997-67d9-463f-a08a-60f5bc6417fb/edit?viewport_loc=-936%2C878%2C1691%2C821%2C0_0&invitationId=inv_c09f60b7-bbcf-483d-a55f-dd3d7c6d5336 
+
 This project was first created in July 2025.
