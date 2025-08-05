@@ -1,6 +1,5 @@
 package com.example.crochet_app.models.dto;
 
-import com.example.crochet_app.models.Project;
 import com.example.crochet_app.models.ProjectDetails;
 
 public class ProjectDTO {
