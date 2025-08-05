@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="top-header">
+            <title>CrochetCorner</title>
             <nav className="nav-bar">
                 <NavLink to="/" end className="nav-link">
                     Home
