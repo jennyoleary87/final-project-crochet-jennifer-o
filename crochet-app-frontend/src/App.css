@@ -53,7 +53,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: #5e548e;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
     padding-bottom: 2px;
@@ -95,14 +95,14 @@ footer {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     .project-list {
         grid-template-columns: 1fr;
         padding: 15px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 766px) and (max-width: 1024px) {
     .project-list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -150,7 +150,7 @@ footer {
 
 .project-description {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #5e548e;
 }
 
@@ -211,7 +211,6 @@ main h3 {
     flex: 1;
 }
 
-/* Style each input block */
 .form-item {
     display: flex;
     flex-direction: column;

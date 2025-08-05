@@ -3,7 +3,6 @@ import Button from './Button';
 
 let initialProject = {
     name: '',
-    userId: 0,
 };
 
 let initialDetails = {
@@ -19,14 +18,12 @@ let errorMessages = {
     yarnRequired: 'Yarn type is required.',
     hookRequired: 'Hook size is required.',
     timeSpentRequired: 'Time spent is required.',
-    userIdRequired: 'User ID is required.',
 };
 
 const ProjectForm = ({ existingProject = null, onSuccess }) => {
     const [project, setProject] = useState(
         existingProject ? {
             name: existingProject.name || '',
-            userId: existingProject.user?.id || 0,
         } : initialProject
     );
 
@@ -47,8 +44,7 @@ const ProjectForm = ({ existingProject = null, onSuccess }) => {
             newProject.details.description &&
             newProject.details.yarn &&
             newProject.details.hook > 0 &&
-            newProject.details.timeSpent >= 0 &&
-            newProject.userId > 0
+            newProject.details.timeSpent >= 0
         );
     };
 
@@ -96,8 +92,7 @@ const ProjectForm = ({ existingProject = null, onSuccess }) => {
                 alert(`Error: ${errorData.message || 'Failed to save project'}`);
             }
         } catch (error) {
-            console.error('Network error:', error);
-            alert('Network error - please try again');
+            alert('Error - please try again');
         }
     };
 
@@ -134,19 +129,6 @@ const ProjectForm = ({ existingProject = null, onSuccess }) => {
                                 <div className="error-message">{errorMessages.nameRequired}</div>
                             )}
                         </div>
-                        <div className="form-item col-4">
-                            <label htmlFor="userId">User ID:</label>
-                            <input
-                                type="number"
-                                id="userId"
-                                value={project.userId}
-                                onChange={handleProjectChange}
-                                required
-                            />
-                            {hasErrors && project.userId === 0 && (
-                                <div className="error-message">{errorMessages.userIdRequired}</div>
-                            )}
-                        </div>
                     </div>
 
                     <div className="row">
@@ -167,7 +149,7 @@ const ProjectForm = ({ existingProject = null, onSuccess }) => {
                             <label htmlFor="hook">Hook Size:</label>
                             <input
                                 type="number"
-                                step="0.1"
+                                step="0.5"
                                 id="hook"
                                 value={details.hook}
                                 onChange={handleDetailsChange}
